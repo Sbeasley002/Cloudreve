@@ -31,6 +31,12 @@ jobs:
           chmod +x ./build.sh
           ./build.sh -r b
 
+      - name: Upload binary files (linux_s390x)
+        uses: actions/upload-artifact@v2
+        with:
+          name: cloudreve_linux_s390x
+          path: release/cloudreve*linux_s390x.*
+          
       - name: Upload binary files (windows_amd64)
         uses: actions/upload-artifact@v2
         with:
